@@ -47,7 +47,7 @@ void Seal::setShows(int newShows)
 
 bool Seal::train()
 {/*
-	Trains the seal. The dolphin must have a trainer. Returns the 'true' if the training was successful
+	Trains the seal. The seal must have a trainer. Returns the 'true' if the training was successful
 	*/
 	if (this->m_keeper != "") {
 		if (!isTrained())
@@ -57,7 +57,7 @@ bool Seal::train()
 	}
 	else
 	{
-		cout << " This seal has no trainer. Assign a trainer first!";///note: could maybe throw an exception here
+		cout << "This animal has no keeper, assign a keeper first!";///note: could maybe throw an exception here
 		return false;
 	}
 }

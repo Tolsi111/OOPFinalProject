@@ -3,13 +3,13 @@
 #include "Animal.h"
 #include "Dolphin.h"
 #include "Seal.h"
+#include "Shark.h"
 
 using namespace std;
 
 int main() {
-	Dolphin A(1, "Burrito", 10, 2.3, 60.1, 300,Personality::AGGRESSIVE);
+	Shark A(1, "Burrito", 10, 2.3, 60.1, 300,"hammer head",210);
 
-	A.train();
 	/*A.assignKeeper("Maricica");
 	A.train();
 	cout << A.fitForShow() << endl;
@@ -17,7 +17,6 @@ int main() {
 	cout << A.fitForShow() << endl;
 	A.train();
 	A.train();*/
-	cout << A.fitForShow() << endl;
 	cout << A << endl;
 	//A.assignKeeper("Maricica");
 	//cout << A;

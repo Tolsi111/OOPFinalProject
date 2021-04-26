@@ -58,7 +58,7 @@ bool Dolphin::train()
 	}
 	else
 	{
-		cout << " This dolphin has no trainer. Assign a trainer first!";///note: could maybe throw an exception here
+		cout << "This animal has no keeper, assign a keeper first!";///note: could maybe throw an exception here
 		return false;
 	}
 }
