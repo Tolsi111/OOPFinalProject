@@ -5,7 +5,7 @@ It is a **management app** for an aquarium which could be made out of sharks, do
 
 ## Mandatory(main) features:
 - [x] Layered architecture.
-- Add an animal + data validation.
+- [ ] Add an animal + data validation.
 - Remove an animal by id.
 - Display all animals.
 - Filtering: display items with some properties. At least two filters.
