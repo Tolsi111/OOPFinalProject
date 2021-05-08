@@ -142,19 +142,23 @@
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="AnimalRepo.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Dolphin.h" />
     <ClInclude Include="Seal.h" />
     <ClInclude Include="Shark.h" />
     <ClInclude Include="show.h" />
+    <ClInclude Include="Ui.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="AnimalRepo.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Dolphin.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Seal.cpp" />
     <ClCompile Include="Shark.cpp" />
     <ClCompile Include="show.cpp" />
+    <ClCompile Include="Ui.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
