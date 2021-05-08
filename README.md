@@ -4,9 +4,9 @@ This is the last OOP Assignment.
 It is a **management app** for an aquarium which could be made out of sharks, dolphins and seals.
 
 ## Mandatory(main) features:
-[x] Layered architecture.
+  [x] Layered architecture.
+  [] Add an animal + data validation.
 
-[] Add an animal + data validation.
 [] Remove an animal by id.
 
 [] Display all animals.
