@@ -1,3 +1,2 @@
 ﻿  main.cpp
-D:\Eu\Facultate\Oop\FinalProject\here\Project1\Project1\main.cpp(11,63): warning C4305: 'argument': truncation from 'double' to 'float'
-  Project1.vcxproj -> D:\Eu\Facultate\Oop\FinalProject\here\Project1\Debug\OOPFinalProject.exe
+  Project1.vcxproj -> D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Debug\OOPFinalProject.exe

@@ -9,23 +9,59 @@ Ui::Ui(Controller& C) : m_controller{ C }
 
 }
 
+int Ui::intValidation()
+{	/*
+	* Forces the user to give a positive int as the input
+	* Returnes the value
+	*/
+	int x;
+	cin >> x;
+	while (x <= 0) {
+		if (cin.fail()) {
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		cout << "Invalid input, please insert a positive integer" << endl;
+		cin >> x;
+	}
+	return x;
+}
+
+float Ui::floatValidation()
+{	/*
+	* Forces the user to give a positive float as the input
+	* Returnes the value
+	*/
+	float x;
+	cin >> x;
+	while (x <= 0) {
+		if (cin.fail()) {
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+		}
+		cout << "Invalid input, please insert a positive float" << endl;
+		cin >> x;
+	}
+	return x;
+}
+
 void Ui::add()///note: data validation
 {
 	int id, age;
 	float size, weight, upkeep;
 	string name;
 	cout << "id: " << endl;
-	cin >> id;
+	id = intValidation();
 	cout << "name: " << endl;
 	cin >> name;
 	cout << "age: " << endl;
-	cin >> age;
+	age = intValidation();
 	cout << "size: " << endl;
-	cin >> size;
+	size = floatValidation();
 	cout << "weight: " << endl;
-	cin >> weight;
+	weight = floatValidation();;
 	cout << "upkeep: " << endl;
-	cin >> upkeep;
+	upkeep = floatValidation();
 
 	Animal* newAnimal = new Animal(id, name, age, size, weight, upkeep);
 	m_controller.addAnimal(newAnimal);
