@@ -17,8 +17,9 @@ public:
 	Controller(AnimalRepo&);
 
 	void addAnimal(Animal*);
-
 	void removeById(int);
+
+	void displayByCheaper(float);
 	void displayAll();
 };
 

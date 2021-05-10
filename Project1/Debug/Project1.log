@@ -1,2 +1,8 @@
-﻿  main.cpp
+﻿  AnimalRepo.cpp
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(26,21): warning C4018: '<': signed/unsigned mismatch
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(34,21): warning C4018: '<': signed/unsigned mismatch
+  Controller.cpp
+  Ui.cpp
+  main.cpp
+  Generating Code...
   Project1.vcxproj -> D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Debug\OOPFinalProject.exe

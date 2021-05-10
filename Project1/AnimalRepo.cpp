@@ -1,5 +1,7 @@
 #include "AnimalRepo.h"
 #include <algorithm>
+//#include "logic.cpp"
+
 using namespace std;
 void AnimalRepo::addAnimal(Animal* newAnimal)
 {
@@ -26,3 +28,13 @@ ostream& AnimalRepo::display(ostream& os, bool(*filterFunction)(Animal*))
 			os << *m_data[i] << endl;
 	return os;
 }
+
+ostream& AnimalRepo::displayCheaper(ostream& os,float value,bool(*filterFunction2)(Animal*,float))
+{
+	for (auto i = 0; i < m_data.size(); i++)
+		if (filterFunction2(m_data[i],value) == true)
+			os << *m_data[i] << endl;
+	return os;
+}
+
+

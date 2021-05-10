@@ -154,6 +154,7 @@
     <ClCompile Include="AnimalRepo.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Dolphin.cpp" />
+    <ClCompile Include="logic.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Seal.cpp" />
     <ClCompile Include="Shark.cpp" />

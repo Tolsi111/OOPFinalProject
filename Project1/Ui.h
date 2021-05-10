@@ -8,9 +8,6 @@ private:
 public:
 	Ui(Controller&);
 
-	int intValidation();
-	float floatValidation();
-
 	void add();
 	void remove();
 

@@ -2,47 +2,13 @@
 #include <iostream>
 #include <string>
 #include "Animal.h"
+#include "logic.cpp"
+
 using namespace std;
 
 Ui::Ui(Controller& C) : m_controller{ C }
 {
 
-}
-
-int Ui::intValidation()
-{	/*
-	* Forces the user to give a positive int as the input
-	* Returnes the value
-	*/
-	int x;
-	cin >> x;
-	while (x <= 0) {
-		if (cin.fail()) {
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		}
-		cout << "Invalid input, please insert a positive integer" << endl;
-		cin >> x;
-	}
-	return x;
-}
-
-float Ui::floatValidation()
-{	/*
-	* Forces the user to give a positive float as the input
-	* Returnes the value
-	*/
-	float x;
-	cin >> x;
-	while (x <= 0) {
-		if (cin.fail()) {
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		}
-		cout << "Invalid input, please insert a positive float" << endl;
-		cin >> x;
-	}
-	return x;
 }
 
 void Ui::add()///note: data validation
@@ -71,23 +37,29 @@ void Ui::remove()
 {
 	int id;
 	cout << "Id of the animal to be removed: ";
-	cin >> id;
+	id = intValidation();
 	m_controller.removeById(id);
 }
 
 void Ui::Menu()
 {
-	int op;
+	char op;
 	while (true)
 	{
 		cout << "Please insert your option: " << endl;
-		cout << "\t 1 - add" << endl << "\t 2 - remove" << endl << "\t 0 - exit";
-		cin >> op;///note: data validation
-		if (op == 1)
+		cout << "\t 1 - add" << endl << "\t 2 - remove" << endl << "\t 3 - display all" << endl << "\t 4 - display all animals with an upkeep cost lower than a value" << endl << "\t 0 - exit" << endl;
+		cin >> op;
+		if (op == '1')
 			add();
-		else if (op == 2)
+		else if (op == '2')
 			remove();
-		else if (op == 0)
+		else if (op == '3')
+			m_controller.displayAll();
+		else if (op == '4') {
+			float value = floatValidation();
+			m_controller.displayByCheaper(value);
+		}
+		else if (op == '0')
 			break;
 		else
 			cout << "Invalid option  >:[" << endl;

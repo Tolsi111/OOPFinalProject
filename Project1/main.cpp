@@ -4,32 +4,17 @@
 #include "Dolphin.h"
 #include "Seal.h"
 #include "Shark.h"
+#include "AnimalRepo.h"
+#include "Controller.h"
+#include "Ui.h"
+//#include "logic.cpp"
 
 using namespace std;
 
 int main() {
-	//Shark A(1, "Burrito", 10, 2.3, 60.1, 300,"hammer head",210);
+	AnimalRepo repo;
+	Controller C(repo);
+	Ui ui(C);
 
-	/*A.assignKeeper("Maricica");
-	A.train();
-	cout << A.fitForShow() << endl;
-	A.train();
-	cout << A.fitForShow() << endl;
-	A.train();
-	A.train();*/
-	//cout << A << endl;
-	//A.assignKeeper("Maricica");
-	//cout << A;
-
-	int x;
-	cin >> x;
-	while (x <= 0 || 100 <= x) {
-		if (cin.fail()) {
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		}
-		cout << "invalid" << endl;
-		cin >> x;
-	}
-
+	ui.Menu();
 }
