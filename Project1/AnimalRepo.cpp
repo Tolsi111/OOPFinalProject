@@ -28,47 +28,10 @@ Animal* AnimalRepo::removeAnimal(int id)
 	return result;
 }
 
-//vector<string> AnimalRepo::tokenize(string str, char delim)
-//{	/*
-//	Returnes a vector of tokens from the string 'str' using the delimiter 'delim'
-//	*/
-//	vector<string> result;
-//	stringstream ss(str);
-//	string token;
-//	while (getline(ss, token, delim))
-//		result.push_back(token);
-//
-//	return result;
-//}
-
-//istream& operator>>(istream& is,Animal& A)
-//{	/*
-//	Reads
-//	*/
-//
-//	string line;
-//	getline(is, line);///reads a line
-//
-//	vector<string> tokens;///list of the CSVs
-//	stringstream ss(line);
-//	string token;
-//	while (getline(ss,token,','))
-//		tokens.push_back(token);
-//
-//	A.setId(stoi(tokens[0]));///stoi(string) --> returns the int representation of the string
-//	A.setName(tokens[1]);
-//	A.setAge(stof(tokens[2]));///stof(string) --> returns the float representation of the string
-//	A.setSize(stof(tokens[3]));
-//	A.setWeight(stof(tokens[4]));
-//	A.setUpkeep(stof(tokens[5]));
-//	
-//
-//	return is;
-//}
-
-
 string AnimalRepo::animalToCsv(Animal* A)
-{
+{	/*
+	Returns a csv representation of an animal 'A'
+	*/
 	string result;
 	result = to_string(A->getId()) + ',' + A->getName() + ',' + to_string(A->getAge());
 	result += ',' + to_string(A->getSize()) + ',' + to_string(A->getWeight()) + ',' + to_string(A->getUpkeep());
@@ -100,7 +63,14 @@ void AnimalRepo::loadData()
 	Reads tha data from 'Input.csv' and loads it into the repository
 	*/
 	fstream inputFile;
-	inputFile.open("Input.csv",ios::in);
+	try
+	{
+		inputFile.open("Input.csv",ios::in);
+	}
+	catch (const exception&)
+	{
+		cout << "\n INPUT FILE COULDN'T OPEN \n";
+	}
 	string line;
 
 	while (getline(inputFile, line))
@@ -132,10 +102,16 @@ void AnimalRepo::saveData()/////////////////INCOMPLETE
 	Writes and saves the data from the repository to 'Result.csv'
 	*/
 	fstream fout;
-	fout.open("Result.csv", ios::out);
+	try
+	{
+		fout.open("Result.csv", ios::out);
+	}
+	catch (const exception&)
+	{
+		cout << "\n OUTPUT FILE COULDN'T OPEN \n";
+	}
+	
 	for (auto i = 0; i < m_data.size(); i++)
 		fout << animalToCsv(m_data[i]) << endl;
 	fout.close();
 }
-
-
