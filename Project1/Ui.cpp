@@ -43,11 +43,15 @@ void Ui::remove()
 
 void Ui::Menu()
 {
+	m_controller.loadData();///Loads the data from the csv file 'Input.csv'
+
 	char op;
 	while (true)
 	{
 		cout << "Please insert your option: " << endl;
-		cout << "\t 1 - add" << endl << "\t 2 - remove" << endl << "\t 3 - display all" << endl << "\t 4 - display all animals with an upkeep cost lower than a value" << endl << "\t 0 - exit" << endl;
+		cout << "\t 1 - add" << endl << "\t 2 - remove" << endl << "\t 3 - display all" << endl;
+		cout << "\t 4 - display all animals with an upkeep cost lower than a value" << endl << "\t 5 - display all the new born animals" << endl;
+		cout << "\t 0 - exit" << endl;
 		cin >> op;
 		if (op == '1')
 			add();
@@ -59,10 +63,14 @@ void Ui::Menu()
 			float value = floatValidation();
 			m_controller.displayByCheaper(value);
 		}
+		else if (op == '5')
+			m_controller.displayNewBorn();
 		else if (op == '0')
 			break;
 		else
 			cout << "Invalid option  >:[" << endl;
 
 	}
+
+	m_controller.saveData();///Saves the data from the repository to the csv file 'Result.csv'
 }

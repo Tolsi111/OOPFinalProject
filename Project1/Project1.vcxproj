@@ -161,6 +161,10 @@
     <ClCompile Include="show.cpp" />
     <ClCompile Include="Ui.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Input.csv" />
+    <None Include="Result.csv" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

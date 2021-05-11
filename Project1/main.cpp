@@ -7,6 +7,7 @@
 #include "AnimalRepo.h"
 #include "Controller.h"
 #include "Ui.h"
+
 //#include "logic.cpp"
 
 using namespace std;
@@ -17,4 +18,15 @@ int main() {
 	Ui ui(C);
 
 	ui.Menu();
+
+
+
+
+
+	/*ifstream fin("Input.csv");
+
+	string s1, s2, s3;
+	int nb;
+	fin >> s1;
+	cout << s1;*/
 }

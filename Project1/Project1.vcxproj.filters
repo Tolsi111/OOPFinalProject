@@ -72,4 +72,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Input.csv">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Result.csv">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

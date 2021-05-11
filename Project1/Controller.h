@@ -20,6 +20,12 @@ public:
 	void removeById(int);
 
 	void displayByCheaper(float);
+	void displayNewBorn();
 	void displayAll();
+
+	void loadData();
+	void saveData();
+
+	//void assignKeeper(int id,string keeperName);
 };
 

@@ -1,6 +1,8 @@
 #pragma once
+#include <istream>
 #include "Animal.h"
 #include <vector>
+
 using namespace std;
 
 class AnimalRepo
@@ -12,26 +14,15 @@ public:
 	void addAnimal(Animal*);
 	Animal* removeAnimal(int);
 
+	//vector<string> tokenize(string, char);
+	//friend istream& operator >> (istream&,Animal&);
+	string animalToCsv(Animal*);
 
 	ostream& display(ostream& os, bool (*filterFunction)(Animal*));
 	ostream& displayCheaper(ostream& os, float value, bool(*filterFunction2)(Animal*,float));
 
-};
+	void loadData();
+	void saveData();
 
-//class Filter
-//{
-//private:
-//	virtual bool filter(Animal*);
-//};
-//
-//class FilterByLowerCost : public Filter
-//{
-//public:
-//	FilterByLowerCost();
-//	void setPrice(float);
-//	bool filter(Animal*) override;
-//
-//private:
-//	float price;
-//};
+};
 
