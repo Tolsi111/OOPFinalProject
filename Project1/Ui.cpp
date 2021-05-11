@@ -51,6 +51,7 @@ void Ui::Menu()
 		cout << "Please insert your option: " << endl;
 		cout << "\t 1 - add" << endl << "\t 2 - remove" << endl << "\t 3 - display all" << endl;
 		cout << "\t 4 - display all animals with an upkeep cost lower than a value" << endl << "\t 5 - display all the new born animals" << endl;
+		cout << "\t 6 - undo" << endl << "\t 7 - redo" << endl;
 		cout << "\t 0 - exit" << endl;
 		cin >> op;
 		if (op == '1')
@@ -65,6 +66,10 @@ void Ui::Menu()
 		}
 		else if (op == '5')
 			m_controller.displayNewBorn();
+		else if (op == '6')
+			m_controller.undo();
+		else if (op == '7')
+			m_controller.redo();
 		else if (op == '0')
 			break;
 		else

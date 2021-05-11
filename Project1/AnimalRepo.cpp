@@ -97,7 +97,7 @@ void AnimalRepo::loadData()
 	inputFile.close();
 }
 
-void AnimalRepo::saveData()/////////////////INCOMPLETE
+void AnimalRepo::saveData()
 {	/*
 	Writes and saves the data from the repository to 'Result.csv'
 	*/
@@ -111,7 +111,7 @@ void AnimalRepo::saveData()/////////////////INCOMPLETE
 		cout << "\n OUTPUT FILE COULDN'T OPEN \n";
 	}
 	
-	for (auto i = 0; i < m_data.size(); i++)
+	for (auto i = 0; i < m_data.size(); i++)///print every animal
 		fout << animalToCsv(m_data[i]) << endl;
 	fout.close();
 }

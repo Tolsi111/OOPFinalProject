@@ -19,6 +19,38 @@ void Controller::removeById(int id)
 		m_undoStack.push(std::make_pair(Action::REMOVE,A));
 }
 
+void Controller::undo()
+{
+	if (!m_undoStack.empty())
+	{
+		pair<Action, Animal*> lastOperation = m_undoStack.top();
+		m_redoStack.push(lastOperation);///add the last operation to the redo stack
+
+		if (lastOperation.first == Action::ADD)///if last operation was 'ADD' then remove the added element
+			m_repo.removeAnimal(lastOperation.second->getId());
+		else
+			m_repo.addAnimal(lastOperation.second);///if last operation was 'REMOVE' then add the removed element
+
+		m_undoStack.pop();
+	}
+}
+
+void Controller::redo()
+{
+	if (!m_redoStack.empty())
+	{
+		pair<Action, Animal*> lastOperation = m_redoStack.top();
+		m_undoStack.push(lastOperation);///add the last operation back to the undo stack
+
+		if (lastOperation.first == Action::ADD)///if last operation was 'ADD' then add back the animal 
+			m_repo.addAnimal(lastOperation.second);
+		else
+			m_repo.removeAnimal(lastOperation.second->getId());///if last operation was 'REMOVE' then remove back the animal
+
+		m_redoStack.pop();
+	}
+}
+
 void Controller::displayByCheaper(float value)
 {	/*
 	Displays all the animals that have the upkeep cost lower than a given 'value'

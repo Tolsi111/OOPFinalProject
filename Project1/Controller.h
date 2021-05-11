@@ -19,6 +19,9 @@ public:
 	void addAnimal(Animal*);
 	void removeById(int);
 
+	void undo();
+	void redo();
+
 	void displayByCheaper(float);
 	void displayNewBorn();
 	void displayAll();

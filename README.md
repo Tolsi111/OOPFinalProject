@@ -10,7 +10,7 @@ It is a **management app** for an aquarium which could be made out of sharks, do
 - [x] Display all animals.
 - [x] Filtering: display items with some properties. At least two filters.
 - [x] Throw (and handle) at least two exceptions.
-- [ ] Undo/redo.
+- [x] Undo/redo.
 - [x] Persistence at the repository level: read (when application starts) and save (when application ends) data from csv file.
 - [ ] Testing
 ## Other features:

@@ -1,6 +1,2 @@
-﻿  AnimalRepo.cpp
-D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(45,21): warning C4018: '<': signed/unsigned mismatch
-D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(55,21): warning C4018: '<': signed/unsigned mismatch
-D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(88,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(114,21): warning C4018: '<': signed/unsigned mismatch
+﻿  Controller.cpp
   Project1.vcxproj -> D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Debug\OOPFinalProject.exe
