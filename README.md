@@ -14,4 +14,3 @@ It is a **management app** for an aquarium which could be made out of sharks, do
 - [x] Persistence at the repository level: read (when application starts) and save (when application ends) data from csv file.
 - [ ] Testing
 ## Other features:
-# OopProject
