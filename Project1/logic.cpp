@@ -1,5 +1,4 @@
 #include <iostream>
-//#include "Animal.h"
 
 using namespace std;
 
@@ -38,14 +37,3 @@ inline float floatValidation()
 	}
 	return x;
 }
-
-//bool filterCheaper(Animal* A) {
-//	/*
-//	* Returnes true if the animal upkeep is lower then the 'maxPrice'
-//	*/
-//	//float maxPrice = floatValidation();
-//	//float maxPrice = floatValidation();
-//	if (A->getUpkeep() <= maxPrice)
-//		return true;
-//	return false;
-//}

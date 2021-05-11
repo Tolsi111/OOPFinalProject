@@ -11,8 +11,10 @@ Ui::Ui(Controller& C) : m_controller{ C }
 
 }
 
-void Ui::add()///note: data validation
-{
+void Ui::add()
+{	/*
+	Asks the user for input. Creates an Animal object with that input. Adds it to the repo
+	*/
 	int id, age;
 	float size, weight, upkeep;
 	string name;
@@ -35,6 +37,9 @@ void Ui::add()///note: data validation
 
 void Ui::remove()
 {
+	/*
+	Asks the user for input. Removes the Animal with the given id;
+	*/
 	int id;
 	cout << "Id of the animal to be removed: ";
 	id = intValidation();
@@ -42,7 +47,9 @@ void Ui::remove()
 }
 
 void Ui::Menu()
-{
+{	/*
+	Starts the Menu
+	*/
 	m_controller.loadData();///Loads the data from the csv file 'Input.csv'
 
 	char op;

@@ -1,0 +1,11 @@
+﻿  FinalProjectTesting.cpp
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(34,21): warning C4018: '<': signed/unsigned mismatch
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(54,21): warning C4018: '<': signed/unsigned mismatch
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(64,21): warning C4018: '<': signed/unsigned mismatch
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(97,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Project1\AnimalRepo.cpp(123,21): warning C4018: '<': signed/unsigned mismatch
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\FinalProjectTesting\FinalProjectTesting.cpp(24,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\FinalProjectTesting\FinalProjectTesting.cpp(36,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\FinalProjectTesting\FinalProjectTesting.cpp(52,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+     Creating library D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Debug\FinalProjectTesting.lib and object D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Debug\FinalProjectTesting.exp
+  FinalProjectTesting.vcxproj -> D:\Eu\Facultate\Oop\FinalProject\here\Project1\OOPFinalProject\Debug\FinalProjectTesting.dll

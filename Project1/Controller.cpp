@@ -20,7 +20,9 @@ void Controller::removeById(int id)
 }
 
 void Controller::undo()
-{
+{	/*
+	Undo last operation
+	*/
 	if (!m_undoStack.empty())
 	{
 		pair<Action, Animal*> lastOperation = m_undoStack.top();
@@ -36,7 +38,9 @@ void Controller::undo()
 }
 
 void Controller::redo()
-{
+{	/*
+	Undo last operation
+	*/
 	if (!m_redoStack.empty())
 	{
 		pair<Action, Animal*> lastOperation = m_redoStack.top();
@@ -81,11 +85,15 @@ void Controller::displayAll()
 }
 
 void Controller::loadData()
-{
+{	/*
+	Loads the data from a csv file
+	*/
 	m_repo.loadData();
 }
 
 void Controller::saveData()
-{
+{	/*
+	Saves the data from a csv file
+	*/
 	m_repo.saveData();
 }

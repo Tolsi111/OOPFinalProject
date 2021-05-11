@@ -61,7 +61,9 @@ bool Shark::safeDiving()
 }
 
 void Shark::display(ostream& os) const
-{
+{	/*
+	Builds the stream for displaying
+	*/
 	os << this->m_bread << " shark ";
 	Animal::display(os);
 	if (this->m_threat == 0)

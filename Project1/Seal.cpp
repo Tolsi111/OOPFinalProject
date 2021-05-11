@@ -46,7 +46,7 @@ void Seal::setShows(int newShows)
 }
 
 bool Seal::train()
-{/*
+{	/*
 	Trains the seal. The seal must have a trainer. Returns the 'true' if the training was successful
 	*/
 	if (this->m_keeper != "") {
@@ -63,7 +63,7 @@ bool Seal::train()
 }
 
 bool Seal::fitForShow()
-{/*
+{	/*
 	A seal is fit for performing in a show if it has been trained at least 5 times
 	*/
 	if (isTrained())
